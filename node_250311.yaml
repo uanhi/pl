@@ -1,0 +1,1294 @@
+mixed-port: 7890
+allow-lan: true
+bind-address: "*"
+mode: rule
+log-level: info
+external-controller: "127.0.0.1:9090"
+dns:
+  enable: true
+  ipv6: false
+  default-nameserver: [223.5.5.5, 119.29.29.29]
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  use-hosts: true
+  nameserver: ["https://doh.pub/dns-query", "https://dns.alidns.com/dns-query"]
+  fallback:
+    [
+      "https://doh.dns.sb/dns-query",
+      "https://dns.cloudflare.com/dns-query",
+      "https://dns.twnic.tw/dns-query",
+      "tls://8.8.4.4:853",
+    ]
+  fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
+proxies:
+  - {
+      name: "剩余流量：221.99 GB",
+      type: trojan,
+      server: wb.kaiqsz.com,
+      port: 12221,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: 套餐到期：2025-04-11,
+      type: trojan,
+      server: wb.kaiqsz.com,
+      port: 12221,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🔗 节点异常请刷新订阅",
+      type: trojan,
+      server: wb.kaiqsz.com,
+      port: 12221,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇭🇰 香港1",
+      type: trojan,
+      server: wb.kaiqsz.com,
+      port: 12221,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇭🇰 香港2",
+      type: trojan,
+      server: wb.kaiqsz.com,
+      port: 12221,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇭🇰 香港3",
+      type: trojan,
+      server: wb.kaiqsz.com,
+      port: 12221,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇭🇰 香港4-原生",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 20469,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇨🇳 台湾1",
+      type: trojan,
+      server: wb.kaiqsz.com,
+      port: 42765,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz1.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇨🇳 台湾2",
+      type: trojan,
+      server: wb.kaiqsz.com,
+      port: 42765,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz1.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇨🇳 台湾3",
+      type: trojan,
+      server: wb.kaiqsz.com,
+      port: 42765,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz1.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇸🇬 新加坡1",
+      type: trojan,
+      server: wb.kaiqsz.com,
+      port: 48291,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz1.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇸🇬 新加坡2",
+      type: trojan,
+      server: wb.kaiqsz.com,
+      port: 18489,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz1.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇯🇵 日本1",
+      type: trojan,
+      server: wb.kaiqsz.com,
+      port: 28713,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz1.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇯🇵 日本2",
+      type: trojan,
+      server: wb.kaiqsz.com,
+      port: 28713,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz1.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇯🇵 日本1-原生",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 10367,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz1.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇯🇵 日本2-原生",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 10367,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz1.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇺🇸 美国1",
+      type: trojan,
+      server: wb.kaiqsz.com,
+      port: 21489,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇺🇸 美国2",
+      type: trojan,
+      server: wb.kaiqsz.com,
+      port: 21489,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇺🇸 美国原生",
+      type: trojan,
+      server: nbae7a7.kaiqsz.com,
+      port: 53547,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇰🇷 韩国",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 39593,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz10.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇰🇷 韩国-首尔",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 51075,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz10.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇩🇪 德国",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 21463,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz12.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇫🇷 法国",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 52508,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz12.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇬🇧 英国",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 59358,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz11.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇳🇱 荷兰",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 23852,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz13.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇮🇳 印度-西部",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 33243,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz13.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇨🇱 智利",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 44134,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz10.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇧🇷 巴西",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 28499,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz10.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇪🇸 西班牙",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 34249,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz12.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇨🇭 瑞士",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 50140,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz11.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇸🇪 瑞典",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 59225,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz12.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇲🇽 墨西哥",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 14571,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz13.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇨🇦 加拿大",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 50121,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz13.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇦🇺 澳大利亚",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 50757,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz14.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇦🇪 迪拜",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 47621,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz10.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇿🇦 南非",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 53759,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz11.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇸🇦 沙特阿拉伯",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 56072,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz11.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇨🇴 哥伦比亚",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 25118,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz10.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇮🇱 以色列",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 44650,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz11.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇻🇳 越南",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 59009,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz14.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇹🇭 泰国",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 43855,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz14.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇲🇾 马来西亚",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 30383,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz14.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇷🇺 莫斯科",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 16783,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz15.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇵🇭 菲律宾",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 58947,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz15.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇳🇬 尼日利亚",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 34183,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz16.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇮🇩 印度尼西亚",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 27056,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz16.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇹🇷 土耳其",
+      type: trojan,
+      server: lm.kaiqsz.com,
+      port: 49596,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz16.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇭🇰香港 IPV6",
+      type: trojan,
+      server: ipv6.hongxingdl.vip,
+      port: 12221,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇨🇳 台湾 IPV6",
+      type: trojan,
+      server: ipv6.hongxingdl.vip,
+      port: 42765,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz1.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇸🇬 新加坡 IPV6",
+      type: trojan,
+      server: ipv6.hongxingdl.vip,
+      port: 48291,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz1.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇯🇵 日本 IPV6",
+      type: trojan,
+      server: ipv6.hongxingdl.vip,
+      port: 28713,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz1.redapricotcloud.com,
+      network: tcp,
+    }
+  - {
+      name: "🇺🇸 美国 IPV6",
+      type: trojan,
+      server: ipv6.hongxingdl.vip,
+      port: 21489,
+      password: 633226a0-01de-4f03-8f44-80470b23c24f,
+      udp: true,
+      skip-cert-verify: true,
+      sni: mmbiz.redapricotcloud.com,
+      network: tcp,
+    }
+proxy-groups:
+  - {
+      name: node,
+      type: select,
+      proxies:
+        [
+          自动选择,
+          故障转移,
+          "剩余流量：221.99 GB",
+          套餐到期：2025-04-11,
+          "🔗 节点异常请刷新订阅",
+          "🇭🇰 香港1",
+          "🇭🇰 香港2",
+          "🇭🇰 香港3",
+          "🇭🇰 香港4-原生",
+          "🇨🇳 台湾1",
+          "🇨🇳 台湾2",
+          "🇨🇳 台湾3",
+          "🇸🇬 新加坡1",
+          "🇸🇬 新加坡2",
+          "🇯🇵 日本1",
+          "🇯🇵 日本2",
+          "🇯🇵 日本1-原生",
+          "🇯🇵 日本2-原生",
+          "🇺🇸 美国1",
+          "🇺🇸 美国2",
+          "🇺🇸 美国原生",
+          "🇰🇷 韩国",
+          "🇰🇷 韩国-首尔",
+          "🇩🇪 德国",
+          "🇫🇷 法国",
+          "🇬🇧 英国",
+          "🇳🇱 荷兰",
+          "🇮🇳 印度-西部",
+          "🇨🇱 智利",
+          "🇧🇷 巴西",
+          "🇪🇸 西班牙",
+          "🇨🇭 瑞士",
+          "🇸🇪 瑞典",
+          "🇲🇽 墨西哥",
+          "🇨🇦 加拿大",
+          "🇦🇺 澳大利亚",
+          "🇦🇪 迪拜",
+          "🇿🇦 南非",
+          "🇸🇦 沙特阿拉伯",
+          "🇨🇴 哥伦比亚",
+          "🇮🇱 以色列",
+          "🇻🇳 越南",
+          "🇹🇭 泰国",
+          "🇲🇾 马来西亚",
+          "🇷🇺 莫斯科",
+          "🇵🇭 菲律宾",
+          "🇳🇬 尼日利亚",
+          "🇮🇩 印度尼西亚",
+          "🇹🇷 土耳其",
+          "🇭🇰香港 IPV6",
+          "🇨🇳 台湾 IPV6",
+          "🇸🇬 新加坡 IPV6",
+          "🇯🇵 日本 IPV6",
+          "🇺🇸 美国 IPV6",
+        ],
+    }
+  - {
+      name: 自动选择,
+      type: url-test,
+      proxies:
+        [
+          "剩余流量：221.99 GB",
+          套餐到期：2025-04-11,
+          "🔗 节点异常请刷新订阅",
+          "🇭🇰 香港1",
+          "🇭🇰 香港2",
+          "🇭🇰 香港3",
+          "🇭🇰 香港4-原生",
+          "🇨🇳 台湾1",
+          "🇨🇳 台湾2",
+          "🇨🇳 台湾3",
+          "🇸🇬 新加坡1",
+          "🇸🇬 新加坡2",
+          "🇯🇵 日本1",
+          "🇯🇵 日本2",
+          "🇯🇵 日本1-原生",
+          "🇯🇵 日本2-原生",
+          "🇺🇸 美国1",
+          "🇺🇸 美国2",
+          "🇺🇸 美国原生",
+          "🇰🇷 韩国",
+          "🇰🇷 韩国-首尔",
+          "🇩🇪 德国",
+          "🇫🇷 法国",
+          "🇬🇧 英国",
+          "🇳🇱 荷兰",
+          "🇮🇳 印度-西部",
+          "🇨🇱 智利",
+          "🇧🇷 巴西",
+          "🇪🇸 西班牙",
+          "🇨🇭 瑞士",
+          "🇸🇪 瑞典",
+          "🇲🇽 墨西哥",
+          "🇨🇦 加拿大",
+          "🇦🇺 澳大利亚",
+          "🇦🇪 迪拜",
+          "🇿🇦 南非",
+          "🇸🇦 沙特阿拉伯",
+          "🇨🇴 哥伦比亚",
+          "🇮🇱 以色列",
+          "🇻🇳 越南",
+          "🇹🇭 泰国",
+          "🇲🇾 马来西亚",
+          "🇷🇺 莫斯科",
+          "🇵🇭 菲律宾",
+          "🇳🇬 尼日利亚",
+          "🇮🇩 印度尼西亚",
+          "🇹🇷 土耳其",
+          "🇭🇰香港 IPV6",
+          "🇨🇳 台湾 IPV6",
+          "🇸🇬 新加坡 IPV6",
+          "🇯🇵 日本 IPV6",
+          "🇺🇸 美国 IPV6",
+        ],
+      url: "http://www.gstatic.com/generate_204",
+      interval: 86400,
+    }
+  - {
+      name: 故障转移,
+      type: fallback,
+      proxies:
+        [
+          "剩余流量：221.99 GB",
+          套餐到期：2025-04-11,
+          "🔗 节点异常请刷新订阅",
+          "🇭🇰 香港1",
+          "🇭🇰 香港2",
+          "🇭🇰 香港3",
+          "🇭🇰 香港4-原生",
+          "🇨🇳 台湾1",
+          "🇨🇳 台湾2",
+          "🇨🇳 台湾3",
+          "🇸🇬 新加坡1",
+          "🇸🇬 新加坡2",
+          "🇯🇵 日本1",
+          "🇯🇵 日本2",
+          "🇯🇵 日本1-原生",
+          "🇯🇵 日本2-原生",
+          "🇺🇸 美国1",
+          "🇺🇸 美国2",
+          "🇺🇸 美国原生",
+          "🇰🇷 韩国",
+          "🇰🇷 韩国-首尔",
+          "🇩🇪 德国",
+          "🇫🇷 法国",
+          "🇬🇧 英国",
+          "🇳🇱 荷兰",
+          "🇮🇳 印度-西部",
+          "🇨🇱 智利",
+          "🇧🇷 巴西",
+          "🇪🇸 西班牙",
+          "🇨🇭 瑞士",
+          "🇸🇪 瑞典",
+          "🇲🇽 墨西哥",
+          "🇨🇦 加拿大",
+          "🇦🇺 澳大利亚",
+          "🇦🇪 迪拜",
+          "🇿🇦 南非",
+          "🇸🇦 沙特阿拉伯",
+          "🇨🇴 哥伦比亚",
+          "🇮🇱 以色列",
+          "🇻🇳 越南",
+          "🇹🇭 泰国",
+          "🇲🇾 马来西亚",
+          "🇷🇺 莫斯科",
+          "🇵🇭 菲律宾",
+          "🇳🇬 尼日利亚",
+          "🇮🇩 印度尼西亚",
+          "🇹🇷 土耳其",
+          "🇭🇰香港 IPV6",
+          "🇨🇳 台湾 IPV6",
+          "🇸🇬 新加坡 IPV6",
+          "🇯🇵 日本 IPV6",
+          "🇺🇸 美国 IPV6",
+        ],
+      url: "http://www.gstatic.com/generate_204",
+      interval: 7200,
+    }
+rules:
+  - "DOMAIN,148.66.62.250,DIRECT"
+  - "DOMAIN-SUFFIX,services.googleapis.cn,node"
+  - "DOMAIN-SUFFIX,xn--ngstr-lra8j.com,node"
+  - "DOMAIN,safebrowsing.urlsec.qq.com,DIRECT"
+  - "DOMAIN,safebrowsing.googleapis.com,DIRECT"
+  - "DOMAIN,developer.apple.com,node"
+  - "DOMAIN-SUFFIX,digicert.com,node"
+  - "DOMAIN,ocsp.apple.com,node"
+  - "DOMAIN,ocsp.comodoca.com,node"
+  - "DOMAIN,ocsp.usertrust.com,node"
+  - "DOMAIN,ocsp.sectigo.com,node"
+  - "DOMAIN,ocsp.verisign.net,node"
+  - "DOMAIN-SUFFIX,apple-dns.net,node"
+  - "DOMAIN,testflight.apple.com,node"
+  - "DOMAIN,sandbox.itunes.apple.com,node"
+  - "DOMAIN,itunes.apple.com,node"
+  - "DOMAIN-SUFFIX,apps.apple.com,node"
+  - "DOMAIN-SUFFIX,blobstore.apple.com,node"
+  - "DOMAIN,cvws.icloud-content.com,node"
+  - "DOMAIN-SUFFIX,mzstatic.com,DIRECT"
+  - "DOMAIN-SUFFIX,itunes.apple.com,DIRECT"
+  - "DOMAIN-SUFFIX,icloud.com,DIRECT"
+  - "DOMAIN-SUFFIX,icloud-content.com,DIRECT"
+  - "DOMAIN-SUFFIX,me.com,DIRECT"
+  - "DOMAIN-SUFFIX,aaplimg.com,DIRECT"
+  - "DOMAIN-SUFFIX,cdn20.com,DIRECT"
+  - "DOMAIN-SUFFIX,cdn-apple.com,DIRECT"
+  - "DOMAIN-SUFFIX,akadns.net,DIRECT"
+  - "DOMAIN-SUFFIX,akamaiedge.net,DIRECT"
+  - "DOMAIN-SUFFIX,edgekey.net,DIRECT"
+  - "DOMAIN-SUFFIX,mwcloudcdn.com,DIRECT"
+  - "DOMAIN-SUFFIX,mwcname.com,DIRECT"
+  - "DOMAIN-SUFFIX,apple.com,DIRECT"
+  - "DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT"
+  - "DOMAIN-SUFFIX,apple-mapkit.com,DIRECT"
+  - "DOMAIN-SUFFIX,126.com,DIRECT"
+  - "DOMAIN-SUFFIX,126.net,DIRECT"
+  - "DOMAIN-SUFFIX,127.net,DIRECT"
+  - "DOMAIN-SUFFIX,163.com,DIRECT"
+  - "DOMAIN-SUFFIX,360buyimg.com,DIRECT"
+  - "DOMAIN-SUFFIX,36kr.com,DIRECT"
+  - "DOMAIN-SUFFIX,acfun.tv,DIRECT"
+  - "DOMAIN-SUFFIX,air-matters.com,DIRECT"
+  - "DOMAIN-SUFFIX,aixifan.com,DIRECT"
+  - "DOMAIN-KEYWORD,alicdn,DIRECT"
+  - "DOMAIN-KEYWORD,alipay,DIRECT"
+  - "DOMAIN-KEYWORD,taobao,DIRECT"
+  - "DOMAIN-SUFFIX,amap.com,DIRECT"
+  - "DOMAIN-SUFFIX,autonavi.com,DIRECT"
+  - "DOMAIN-KEYWORD,baidu,DIRECT"
+  - "DOMAIN-SUFFIX,bdimg.com,DIRECT"
+  - "DOMAIN-SUFFIX,bdstatic.com,DIRECT"
+  - "DOMAIN-SUFFIX,bilibili.com,DIRECT"
+  - "DOMAIN-SUFFIX,bilivideo.com,DIRECT"
+  - "DOMAIN-SUFFIX,caiyunapp.com,DIRECT"
+  - "DOMAIN-SUFFIX,clouddn.com,DIRECT"
+  - "DOMAIN-SUFFIX,cnbeta.com,DIRECT"
+  - "DOMAIN-SUFFIX,cnbetacdn.com,DIRECT"
+  - "DOMAIN-SUFFIX,cootekservice.com,DIRECT"
+  - "DOMAIN-SUFFIX,csdn.net,DIRECT"
+  - "DOMAIN-SUFFIX,ctrip.com,DIRECT"
+  - "DOMAIN-SUFFIX,dgtle.com,DIRECT"
+  - "DOMAIN-SUFFIX,dianping.com,DIRECT"
+  - "DOMAIN-SUFFIX,douban.com,DIRECT"
+  - "DOMAIN-SUFFIX,doubanio.com,DIRECT"
+  - "DOMAIN-SUFFIX,duokan.com,DIRECT"
+  - "DOMAIN-SUFFIX,easou.com,DIRECT"
+  - "DOMAIN-SUFFIX,ele.me,DIRECT"
+  - "DOMAIN-SUFFIX,feng.com,DIRECT"
+  - "DOMAIN-SUFFIX,fir.im,DIRECT"
+  - "DOMAIN-SUFFIX,frdic.com,DIRECT"
+  - "DOMAIN-SUFFIX,g-cores.com,DIRECT"
+  - "DOMAIN-SUFFIX,godic.net,DIRECT"
+  - "DOMAIN-SUFFIX,gtimg.com,DIRECT"
+  - "DOMAIN,cdn.hockeyapp.net,DIRECT"
+  - "DOMAIN-SUFFIX,hongxiu.com,DIRECT"
+  - "DOMAIN-SUFFIX,hxcdn.net,DIRECT"
+  - "DOMAIN-SUFFIX,iciba.com,DIRECT"
+  - "DOMAIN-SUFFIX,ifeng.com,DIRECT"
+  - "DOMAIN-SUFFIX,ifengimg.com,DIRECT"
+  - "DOMAIN-SUFFIX,ipip.net,DIRECT"
+  - "DOMAIN-SUFFIX,iqiyi.com,DIRECT"
+  - "DOMAIN-SUFFIX,jd.com,DIRECT"
+  - "DOMAIN-SUFFIX,jianshu.com,DIRECT"
+  - "DOMAIN-SUFFIX,knewone.com,DIRECT"
+  - "DOMAIN-SUFFIX,le.com,DIRECT"
+  - "DOMAIN-SUFFIX,lecloud.com,DIRECT"
+  - "DOMAIN-SUFFIX,lemicp.com,DIRECT"
+  - "DOMAIN-SUFFIX,licdn.com,DIRECT"
+  - "DOMAIN-SUFFIX,luoo.net,DIRECT"
+  - "DOMAIN-SUFFIX,meituan.com,DIRECT"
+  - "DOMAIN-SUFFIX,meituan.net,DIRECT"
+  - "DOMAIN-SUFFIX,mi.com,DIRECT"
+  - "DOMAIN-SUFFIX,miaopai.com,DIRECT"
+  - "DOMAIN-SUFFIX,microsoft.com,DIRECT"
+  - "DOMAIN-SUFFIX,microsoftonline.com,DIRECT"
+  - "DOMAIN-SUFFIX,miui.com,DIRECT"
+  - "DOMAIN-SUFFIX,miwifi.com,DIRECT"
+  - "DOMAIN-SUFFIX,mob.com,DIRECT"
+  - "DOMAIN-SUFFIX,netease.com,DIRECT"
+  - "DOMAIN-SUFFIX,office.com,DIRECT"
+  - "DOMAIN-SUFFIX,office365.com,DIRECT"
+  - "DOMAIN-KEYWORD,officecdn,DIRECT"
+  - "DOMAIN-SUFFIX,oschina.net,DIRECT"
+  - "DOMAIN-SUFFIX,ppsimg.com,DIRECT"
+  - "DOMAIN-SUFFIX,pstatp.com,DIRECT"
+  - "DOMAIN-SUFFIX,qcloud.com,DIRECT"
+  - "DOMAIN-SUFFIX,qdaily.com,DIRECT"
+  - "DOMAIN-SUFFIX,qdmm.com,DIRECT"
+  - "DOMAIN-SUFFIX,qhimg.com,DIRECT"
+  - "DOMAIN-SUFFIX,qhres.com,DIRECT"
+  - "DOMAIN-SUFFIX,qidian.com,DIRECT"
+  - "DOMAIN-SUFFIX,qihucdn.com,DIRECT"
+  - "DOMAIN-SUFFIX,qiniu.com,DIRECT"
+  - "DOMAIN-SUFFIX,qiniucdn.com,DIRECT"
+  - "DOMAIN-SUFFIX,qiyipic.com,DIRECT"
+  - "DOMAIN-SUFFIX,qq.com,DIRECT"
+  - "DOMAIN-SUFFIX,qqurl.com,DIRECT"
+  - "DOMAIN-SUFFIX,rarbg.to,DIRECT"
+  - "DOMAIN-SUFFIX,ruguoapp.com,DIRECT"
+  - "DOMAIN-SUFFIX,segmentfault.com,DIRECT"
+  - "DOMAIN-SUFFIX,sinaapp.com,DIRECT"
+  - "DOMAIN-SUFFIX,smzdm.com,DIRECT"
+  - "DOMAIN-SUFFIX,snapdrop.net,DIRECT"
+  - "DOMAIN-SUFFIX,sogou.com,DIRECT"
+  - "DOMAIN-SUFFIX,sogoucdn.com,DIRECT"
+  - "DOMAIN-SUFFIX,sohu.com,DIRECT"
+  - "DOMAIN-SUFFIX,soku.com,DIRECT"
+  - "DOMAIN-SUFFIX,speedtest.net,DIRECT"
+  - "DOMAIN-SUFFIX,sspai.com,DIRECT"
+  - "DOMAIN-SUFFIX,suning.com,DIRECT"
+  - "DOMAIN-SUFFIX,taobao.com,DIRECT"
+  - "DOMAIN-SUFFIX,tencent.com,DIRECT"
+  - "DOMAIN-SUFFIX,tenpay.com,DIRECT"
+  - "DOMAIN-SUFFIX,tianyancha.com,DIRECT"
+  - "DOMAIN-SUFFIX,tmall.com,DIRECT"
+  - "DOMAIN-SUFFIX,tudou.com,DIRECT"
+  - "DOMAIN-SUFFIX,umetrip.com,DIRECT"
+  - "DOMAIN-SUFFIX,upaiyun.com,DIRECT"
+  - "DOMAIN-SUFFIX,upyun.com,DIRECT"
+  - "DOMAIN-SUFFIX,veryzhun.com,DIRECT"
+  - "DOMAIN-SUFFIX,weather.com,DIRECT"
+  - "DOMAIN-SUFFIX,weibo.com,DIRECT"
+  - "DOMAIN-SUFFIX,xiami.com,DIRECT"
+  - "DOMAIN-SUFFIX,xiami.net,DIRECT"
+  - "DOMAIN-SUFFIX,xiaomicp.com,DIRECT"
+  - "DOMAIN-SUFFIX,ximalaya.com,DIRECT"
+  - "DOMAIN-SUFFIX,xmcdn.com,DIRECT"
+  - "DOMAIN-SUFFIX,xunlei.com,DIRECT"
+  - "DOMAIN-SUFFIX,yhd.com,DIRECT"
+  - "DOMAIN-SUFFIX,yihaodianimg.com,DIRECT"
+  - "DOMAIN-SUFFIX,yinxiang.com,DIRECT"
+  - "DOMAIN-SUFFIX,ykimg.com,DIRECT"
+  - "DOMAIN-SUFFIX,youdao.com,DIRECT"
+  - "DOMAIN-SUFFIX,youku.com,DIRECT"
+  - "DOMAIN-SUFFIX,zealer.com,DIRECT"
+  - "DOMAIN-SUFFIX,zhihu.com,DIRECT"
+  - "DOMAIN-SUFFIX,zhimg.com,DIRECT"
+  - "DOMAIN-SUFFIX,zimuzu.tv,DIRECT"
+  - "DOMAIN-SUFFIX,zoho.com,DIRECT"
+  - "DOMAIN-KEYWORD,amazon,node"
+  - "DOMAIN-KEYWORD,google,node"
+  - "DOMAIN-KEYWORD,gmail,node"
+  - "DOMAIN-KEYWORD,youtube,node"
+  - "DOMAIN-KEYWORD,facebook,node"
+  - "DOMAIN-SUFFIX,fb.me,node"
+  - "DOMAIN-SUFFIX,fbcdn.net,node"
+  - "DOMAIN-KEYWORD,twitter,node"
+  - "DOMAIN-KEYWORD,instagram,node"
+  - "DOMAIN-KEYWORD,dropbox,node"
+  - "DOMAIN-SUFFIX,twimg.com,node"
+  - "DOMAIN-KEYWORD,blogspot,node"
+  - "DOMAIN-SUFFIX,youtu.be,node"
+  - "DOMAIN-KEYWORD,whatsapp,node"
+  - "DOMAIN-KEYWORD,admarvel,REJECT"
+  - "DOMAIN-KEYWORD,admaster,REJECT"
+  - "DOMAIN-KEYWORD,adsage,REJECT"
+  - "DOMAIN-KEYWORD,adsmogo,REJECT"
+  - "DOMAIN-KEYWORD,adsrvmedia,REJECT"
+  - "DOMAIN-KEYWORD,adwords,REJECT"
+  - "DOMAIN-KEYWORD,adservice,REJECT"
+  - "DOMAIN-SUFFIX,appsflyer.com,REJECT"
+  - "DOMAIN-KEYWORD,domob,REJECT"
+  - "DOMAIN-SUFFIX,doubleclick.net,REJECT"
+  - "DOMAIN-KEYWORD,duomeng,REJECT"
+  - "DOMAIN-KEYWORD,dwtrack,REJECT"
+  - "DOMAIN-KEYWORD,guanggao,REJECT"
+  - "DOMAIN-KEYWORD,lianmeng,REJECT"
+  - "DOMAIN-SUFFIX,mmstat.com,REJECT"
+  - "DOMAIN-KEYWORD,mopub,REJECT"
+  - "DOMAIN-KEYWORD,omgmta,REJECT"
+  - "DOMAIN-KEYWORD,openx,REJECT"
+  - "DOMAIN-KEYWORD,partnerad,REJECT"
+  - "DOMAIN-KEYWORD,pingfore,REJECT"
+  - "DOMAIN-KEYWORD,supersonicads,REJECT"
+  - "DOMAIN-KEYWORD,uedas,REJECT"
+  - "DOMAIN-KEYWORD,umeng,REJECT"
+  - "DOMAIN-KEYWORD,usage,REJECT"
+  - "DOMAIN-SUFFIX,vungle.com,REJECT"
+  - "DOMAIN-KEYWORD,wlmonitor,REJECT"
+  - "DOMAIN-KEYWORD,zjtoolbar,REJECT"
+  - "DOMAIN-SUFFIX,9to5mac.com,node"
+  - "DOMAIN-SUFFIX,abpchina.org,node"
+  - "DOMAIN-SUFFIX,adblockplus.org,node"
+  - "DOMAIN-SUFFIX,adobe.com,node"
+  - "DOMAIN-SUFFIX,akamaized.net,node"
+  - "DOMAIN-SUFFIX,alfredapp.com,node"
+  - "DOMAIN-SUFFIX,amplitude.com,node"
+  - "DOMAIN-SUFFIX,ampproject.org,node"
+  - "DOMAIN-SUFFIX,android.com,node"
+  - "DOMAIN-SUFFIX,angularjs.org,node"
+  - "DOMAIN-SUFFIX,aolcdn.com,node"
+  - "DOMAIN-SUFFIX,apkpure.com,node"
+  - "DOMAIN-SUFFIX,appledaily.com,node"
+  - "DOMAIN-SUFFIX,appshopper.com,node"
+  - "DOMAIN-SUFFIX,appspot.com,node"
+  - "DOMAIN-SUFFIX,arcgis.com,node"
+  - "DOMAIN-SUFFIX,archive.org,node"
+  - "DOMAIN-SUFFIX,armorgames.com,node"
+  - "DOMAIN-SUFFIX,aspnetcdn.com,node"
+  - "DOMAIN-SUFFIX,att.com,node"
+  - "DOMAIN-SUFFIX,awsstatic.com,node"
+  - "DOMAIN-SUFFIX,azureedge.net,node"
+  - "DOMAIN-SUFFIX,azurewebsites.net,node"
+  - "DOMAIN-SUFFIX,bing.com,node"
+  - "DOMAIN-SUFFIX,bintray.com,node"
+  - "DOMAIN-SUFFIX,bit.com,node"
+  - "DOMAIN-SUFFIX,bit.ly,node"
+  - "DOMAIN-SUFFIX,bitbucket.org,node"
+  - "DOMAIN-SUFFIX,bjango.com,node"
+  - "DOMAIN-SUFFIX,bkrtx.com,node"
+  - "DOMAIN-SUFFIX,blog.com,node"
+  - "DOMAIN-SUFFIX,blogcdn.com,node"
+  - "DOMAIN-SUFFIX,blogger.com,node"
+  - "DOMAIN-SUFFIX,blogsmithmedia.com,node"
+  - "DOMAIN-SUFFIX,blogspot.com,node"
+  - "DOMAIN-SUFFIX,blogspot.hk,node"
+  - "DOMAIN-SUFFIX,bloomberg.com,node"
+  - "DOMAIN-SUFFIX,box.com,node"
+  - "DOMAIN-SUFFIX,box.net,node"
+  - "DOMAIN-SUFFIX,cachefly.net,node"
+  - "DOMAIN-SUFFIX,chromium.org,node"
+  - "DOMAIN-SUFFIX,cl.ly,node"
+  - "DOMAIN-SUFFIX,cloudflare.com,node"
+  - "DOMAIN-SUFFIX,cloudfront.net,node"
+  - "DOMAIN-SUFFIX,cloudmagic.com,node"
+  - "DOMAIN-SUFFIX,cmail19.com,node"
+  - "DOMAIN-SUFFIX,cnet.com,node"
+  - "DOMAIN-SUFFIX,cocoapods.org,node"
+  - "DOMAIN-SUFFIX,comodoca.com,node"
+  - "DOMAIN-SUFFIX,crashlytics.com,node"
+  - "DOMAIN-SUFFIX,culturedcode.com,node"
+  - "DOMAIN-SUFFIX,d.pr,node"
+  - "DOMAIN-SUFFIX,danilo.to,node"
+  - "DOMAIN-SUFFIX,dayone.me,node"
+  - "DOMAIN-SUFFIX,db.tt,node"
+  - "DOMAIN-SUFFIX,deskconnect.com,node"
+  - "DOMAIN-SUFFIX,disq.us,node"
+  - "DOMAIN-SUFFIX,disqus.com,node"
+  - "DOMAIN-SUFFIX,disquscdn.com,node"
+  - "DOMAIN-SUFFIX,dnsimple.com,node"
+  - "DOMAIN-SUFFIX,docker.com,node"
+  - "DOMAIN-SUFFIX,dribbble.com,node"
+  - "DOMAIN-SUFFIX,droplr.com,node"
+  - "DOMAIN-SUFFIX,duckduckgo.com,node"
+  - "DOMAIN-SUFFIX,dueapp.com,node"
+  - "DOMAIN-SUFFIX,dytt8.net,node"
+  - "DOMAIN-SUFFIX,edgecastcdn.net,node"
+  - "DOMAIN-SUFFIX,edgekey.net,node"
+  - "DOMAIN-SUFFIX,edgesuite.net,node"
+  - "DOMAIN-SUFFIX,engadget.com,node"
+  - "DOMAIN-SUFFIX,entrust.net,node"
+  - "DOMAIN-SUFFIX,eurekavpt.com,node"
+  - "DOMAIN-SUFFIX,evernote.com,node"
+  - "DOMAIN-SUFFIX,fabric.io,node"
+  - "DOMAIN-SUFFIX,fast.com,node"
+  - "DOMAIN-SUFFIX,fastly.net,node"
+  - "DOMAIN-SUFFIX,fc2.com,node"
+  - "DOMAIN-SUFFIX,feedburner.com,node"
+  - "DOMAIN-SUFFIX,feedly.com,node"
+  - "DOMAIN-SUFFIX,feedsportal.com,node"
+  - "DOMAIN-SUFFIX,fiftythree.com,node"
+  - "DOMAIN-SUFFIX,firebaseio.com,node"
+  - "DOMAIN-SUFFIX,flexibits.com,node"
+  - "DOMAIN-SUFFIX,flickr.com,node"
+  - "DOMAIN-SUFFIX,flipboard.com,node"
+  - "DOMAIN-SUFFIX,g.co,node"
+  - "DOMAIN-SUFFIX,gabia.net,node"
+  - "DOMAIN-SUFFIX,geni.us,node"
+  - "DOMAIN-SUFFIX,gfx.ms,node"
+  - "DOMAIN-SUFFIX,ggpht.com,node"
+  - "DOMAIN-SUFFIX,ghostnoteapp.com,node"
+  - "DOMAIN-SUFFIX,git.io,node"
+  - "DOMAIN-KEYWORD,github,node"
+  - "DOMAIN-SUFFIX,globalsign.com,node"
+  - "DOMAIN-SUFFIX,gmodules.com,node"
+  - "DOMAIN-SUFFIX,godaddy.com,node"
+  - "DOMAIN-SUFFIX,golang.org,node"
+  - "DOMAIN-SUFFIX,gongm.in,node"
+  - "DOMAIN-SUFFIX,goo.gl,node"
+  - "DOMAIN-SUFFIX,goodreaders.com,node"
+  - "DOMAIN-SUFFIX,goodreads.com,node"
+  - "DOMAIN-SUFFIX,gravatar.com,node"
+  - "DOMAIN-SUFFIX,gstatic.com,node"
+  - "DOMAIN-SUFFIX,gvt0.com,node"
+  - "DOMAIN-SUFFIX,hockeyapp.net,node"
+  - "DOMAIN-SUFFIX,hotmail.com,node"
+  - "DOMAIN-SUFFIX,icons8.com,node"
+  - "DOMAIN-SUFFIX,ifixit.com,node"
+  - "DOMAIN-SUFFIX,ift.tt,node"
+  - "DOMAIN-SUFFIX,ifttt.com,node"
+  - "DOMAIN-SUFFIX,iherb.com,node"
+  - "DOMAIN-SUFFIX,imageshack.us,node"
+  - "DOMAIN-SUFFIX,img.ly,node"
+  - "DOMAIN-SUFFIX,imgur.com,node"
+  - "DOMAIN-SUFFIX,imore.com,node"
+  - "DOMAIN-SUFFIX,instapaper.com,node"
+  - "DOMAIN-SUFFIX,ipn.li,node"
+  - "DOMAIN-SUFFIX,is.gd,node"
+  - "DOMAIN-SUFFIX,issuu.com,node"
+  - "DOMAIN-SUFFIX,itgonglun.com,node"
+  - "DOMAIN-SUFFIX,itun.es,node"
+  - "DOMAIN-SUFFIX,ixquick.com,node"
+  - "DOMAIN-SUFFIX,j.mp,node"
+  - "DOMAIN-SUFFIX,js.revsci.net,node"
+  - "DOMAIN-SUFFIX,jshint.com,node"
+  - "DOMAIN-SUFFIX,jtvnw.net,node"
+  - "DOMAIN-SUFFIX,justgetflux.com,node"
+  - "DOMAIN-SUFFIX,kat.cr,node"
+  - "DOMAIN-SUFFIX,klip.me,node"
+  - "DOMAIN-SUFFIX,libsyn.com,node"
+  - "DOMAIN-SUFFIX,linkedin.com,node"
+  - "DOMAIN-SUFFIX,line-apps.com,node"
+  - "DOMAIN-SUFFIX,linode.com,node"
+  - "DOMAIN-SUFFIX,lithium.com,node"
+  - "DOMAIN-SUFFIX,littlehj.com,node"
+  - "DOMAIN-SUFFIX,live.com,node"
+  - "DOMAIN-SUFFIX,live.net,node"
+  - "DOMAIN-SUFFIX,livefilestore.com,node"
+  - "DOMAIN-SUFFIX,llnwd.net,node"
+  - "DOMAIN-SUFFIX,macid.co,node"
+  - "DOMAIN-SUFFIX,macromedia.com,node"
+  - "DOMAIN-SUFFIX,macrumors.com,node"
+  - "DOMAIN-SUFFIX,mashable.com,node"
+  - "DOMAIN-SUFFIX,mathjax.org,node"
+  - "DOMAIN-SUFFIX,medium.com,node"
+  - "DOMAIN-SUFFIX,mega.co.nz,node"
+  - "DOMAIN-SUFFIX,mega.nz,node"
+  - "DOMAIN-SUFFIX,megaupload.com,node"
+  - "DOMAIN-SUFFIX,microsofttranslator.com,node"
+  - "DOMAIN-SUFFIX,mindnode.com,node"
+  - "DOMAIN-SUFFIX,mobile01.com,node"
+  - "DOMAIN-SUFFIX,modmyi.com,node"
+  - "DOMAIN-SUFFIX,msedge.net,node"
+  - "DOMAIN-SUFFIX,myfontastic.com,node"
+  - "DOMAIN-SUFFIX,name.com,node"
+  - "DOMAIN-SUFFIX,nextmedia.com,node"
+  - "DOMAIN-SUFFIX,nsstatic.net,node"
+  - "DOMAIN-SUFFIX,nssurge.com,node"
+  - "DOMAIN-SUFFIX,nyt.com,node"
+  - "DOMAIN-SUFFIX,nytimes.com,node"
+  - "DOMAIN-SUFFIX,omnigroup.com,node"
+  - "DOMAIN-SUFFIX,onedrive.com,node"
+  - "DOMAIN-SUFFIX,onenote.com,node"
+  - "DOMAIN-SUFFIX,ooyala.com,node"
+  - "DOMAIN-SUFFIX,openvpn.net,node"
+  - "DOMAIN-SUFFIX,openwrt.org,node"
+  - "DOMAIN-SUFFIX,orkut.com,node"
+  - "DOMAIN-SUFFIX,osxdaily.com,node"
+  - "DOMAIN-SUFFIX,outlook.com,node"
+  - "DOMAIN-SUFFIX,ow.ly,node"
+  - "DOMAIN-SUFFIX,paddleapi.com,node"
+  - "DOMAIN-SUFFIX,parallels.com,node"
+  - "DOMAIN-SUFFIX,parse.com,node"
+  - "DOMAIN-SUFFIX,pdfexpert.com,node"
+  - "DOMAIN-SUFFIX,periscope.tv,node"
+  - "DOMAIN-SUFFIX,pinboard.in,node"
+  - "DOMAIN-SUFFIX,pinterest.com,node"
+  - "DOMAIN-SUFFIX,pixelmator.com,node"
+  - "DOMAIN-SUFFIX,pixiv.net,node"
+  - "DOMAIN-SUFFIX,playpcesor.com,node"
+  - "DOMAIN-SUFFIX,playstation.com,node"
+  - "DOMAIN-SUFFIX,playstation.com.hk,node"
+  - "DOMAIN-SUFFIX,playstation.net,node"
+  - "DOMAIN-SUFFIX,playstationnetwork.com,node"
+  - "DOMAIN-SUFFIX,pushwoosh.com,node"
+  - "DOMAIN-SUFFIX,rime.im,node"
+  - "DOMAIN-SUFFIX,servebom.com,node"
+  - "DOMAIN-SUFFIX,sfx.ms,node"
+  - "DOMAIN-SUFFIX,shadowsocks.org,node"
+  - "DOMAIN-SUFFIX,sharethis.com,node"
+  - "DOMAIN-SUFFIX,shazam.com,node"
+  - "DOMAIN-SUFFIX,skype.com,node"
+  - "DOMAIN-SUFFIX,smartdnsnode.com,node"
+  - "DOMAIN-SUFFIX,smartmailcloud.com,node"
+  - "DOMAIN-SUFFIX,sndcdn.com,node"
+  - "DOMAIN-SUFFIX,sony.com,node"
+  - "DOMAIN-SUFFIX,soundcloud.com,node"
+  - "DOMAIN-SUFFIX,sourceforge.net,node"
+  - "DOMAIN-SUFFIX,spotify.com,node"
+  - "DOMAIN-SUFFIX,squarespace.com,node"
+  - "DOMAIN-SUFFIX,sstatic.net,node"
+  - "DOMAIN-SUFFIX,st.luluku.pw,node"
+  - "DOMAIN-SUFFIX,stackoverflow.com,node"
+  - "DOMAIN-SUFFIX,startpage.com,node"
+  - "DOMAIN-SUFFIX,staticflickr.com,node"
+  - "DOMAIN-SUFFIX,steamcommunity.com,node"
+  - "DOMAIN-SUFFIX,symauth.com,node"
+  - "DOMAIN-SUFFIX,symcb.com,node"
+  - "DOMAIN-SUFFIX,symcd.com,node"
+  - "DOMAIN-SUFFIX,tapbots.com,node"
+  - "DOMAIN-SUFFIX,tapbots.net,node"
+  - "DOMAIN-SUFFIX,tdesktop.com,node"
+  - "DOMAIN-SUFFIX,techcrunch.com,node"
+  - "DOMAIN-SUFFIX,techsmith.com,node"
+  - "DOMAIN-SUFFIX,thepiratebay.org,node"
+  - "DOMAIN-SUFFIX,theverge.com,node"
+  - "DOMAIN-SUFFIX,time.com,node"
+  - "DOMAIN-SUFFIX,timeinc.net,node"
+  - "DOMAIN-SUFFIX,tiny.cc,node"
+  - "DOMAIN-SUFFIX,tinypic.com,node"
+  - "DOMAIN-SUFFIX,tmblr.co,node"
+  - "DOMAIN-SUFFIX,todoist.com,node"
+  - "DOMAIN-SUFFIX,trello.com,node"
+  - "DOMAIN-SUFFIX,trustasiassl.com,node"
+  - "DOMAIN-SUFFIX,tumblr.co,node"
+  - "DOMAIN-SUFFIX,tumblr.com,node"
+  - "DOMAIN-SUFFIX,tweetdeck.com,node"
+  - "DOMAIN-SUFFIX,tweetmarker.net,node"
+  - "DOMAIN-SUFFIX,twitch.tv,node"
+  - "DOMAIN-SUFFIX,txmblr.com,node"
+  - "DOMAIN-SUFFIX,typekit.net,node"
+  - "DOMAIN-SUFFIX,ubertags.com,node"
+  - "DOMAIN-SUFFIX,ublock.org,node"
+  - "DOMAIN-SUFFIX,ubnt.com,node"
+  - "DOMAIN-SUFFIX,ulyssesapp.com,node"
+  - "DOMAIN-SUFFIX,urchin.com,node"
+  - "DOMAIN-SUFFIX,usertrust.com,node"
+  - "DOMAIN-SUFFIX,v.gd,node"
+  - "DOMAIN-SUFFIX,v2ex.com,node"
+  - "DOMAIN-SUFFIX,vimeo.com,node"
+  - "DOMAIN-SUFFIX,vimeocdn.com,node"
+  - "DOMAIN-SUFFIX,vine.co,node"
+  - "DOMAIN-SUFFIX,vivaldi.com,node"
+  - "DOMAIN-SUFFIX,vox-cdn.com,node"
+  - "DOMAIN-SUFFIX,vsco.co,node"
+  - "DOMAIN-SUFFIX,vultr.com,node"
+  - "DOMAIN-SUFFIX,w.org,node"
+  - "DOMAIN-SUFFIX,w3schools.com,node"
+  - "DOMAIN-SUFFIX,webtype.com,node"
+  - "DOMAIN-SUFFIX,wikiwand.com,node"
+  - "DOMAIN-SUFFIX,wikileaks.org,node"
+  - "DOMAIN-SUFFIX,wikimedia.org,node"
+  - "DOMAIN-SUFFIX,wikipedia.com,node"
+  - "DOMAIN-SUFFIX,wikipedia.org,node"
+  - "DOMAIN-SUFFIX,windows.com,node"
+  - "DOMAIN-SUFFIX,windows.net,node"
+  - "DOMAIN-SUFFIX,wire.com,node"
+  - "DOMAIN-SUFFIX,wordpress.com,node"
+  - "DOMAIN-SUFFIX,workflowy.com,node"
+  - "DOMAIN-SUFFIX,wp.com,node"
+  - "DOMAIN-SUFFIX,wsj.com,node"
+  - "DOMAIN-SUFFIX,wsj.net,node"
+  - "DOMAIN-SUFFIX,xda-developers.com,node"
+  - "DOMAIN-SUFFIX,xeeno.com,node"
+  - "DOMAIN-SUFFIX,xiti.com,node"
+  - "DOMAIN-SUFFIX,yahoo.com,node"
+  - "DOMAIN-SUFFIX,yimg.com,node"
+  - "DOMAIN-SUFFIX,ying.com,node"
+  - "DOMAIN-SUFFIX,yoyo.org,node"
+  - "DOMAIN-SUFFIX,ytimg.com,node"
+  - "DOMAIN-SUFFIX,telegra.ph,node"
+  - "DOMAIN-SUFFIX,telegram.org,node"
+  - "IP-CIDR,91.108.4.0/22,node,no-resolve"
+  - "IP-CIDR,91.108.8.0/21,node,no-resolve"
+  - "IP-CIDR,91.108.16.0/22,node,no-resolve"
+  - "IP-CIDR,91.108.56.0/22,node,no-resolve"
+  - "IP-CIDR,149.154.160.0/20,node,no-resolve"
+  - "IP-CIDR6,2001:67c:4e8::/48,node,no-resolve"
+  - "IP-CIDR6,2001:b28:f23d::/48,node,no-resolve"
+  - "IP-CIDR6,2001:b28:f23f::/48,node,no-resolve"
+  - "IP-CIDR,120.232.181.162/32,node,no-resolve"
+  - "IP-CIDR,120.241.147.226/32,node,no-resolve"
+  - "IP-CIDR,120.253.253.226/32,node,no-resolve"
+  - "IP-CIDR,120.253.255.162/32,node,no-resolve"
+  - "IP-CIDR,120.253.255.34/32,node,no-resolve"
+  - "IP-CIDR,120.253.255.98/32,node,no-resolve"
+  - "IP-CIDR,180.163.150.162/32,node,no-resolve"
+  - "IP-CIDR,180.163.150.34/32,node,no-resolve"
+  - "IP-CIDR,180.163.151.162/32,node,no-resolve"
+  - "IP-CIDR,180.163.151.34/32,node,no-resolve"
+  - "IP-CIDR,203.208.39.0/24,node,no-resolve"
+  - "IP-CIDR,203.208.40.0/24,node,no-resolve"
+  - "IP-CIDR,203.208.41.0/24,node,no-resolve"
+  - "IP-CIDR,203.208.43.0/24,node,no-resolve"
+  - "IP-CIDR,203.208.50.0/24,node,no-resolve"
+  - "IP-CIDR,220.181.174.162/32,node,no-resolve"
+  - "IP-CIDR,220.181.174.226/32,node,no-resolve"
+  - "IP-CIDR,220.181.174.34/32,node,no-resolve"
+  - "DOMAIN,injections.adguard.org,DIRECT"
+  - "DOMAIN,local.adguard.org,DIRECT"
+  - "DOMAIN-SUFFIX,local,DIRECT"
+  - "IP-CIDR,127.0.0.0/8,DIRECT"
+  - "IP-CIDR,172.16.0.0/12,DIRECT"
+  - "IP-CIDR,192.168.0.0/16,DIRECT"
+  - "IP-CIDR,10.0.0.0/8,DIRECT"
+  - "IP-CIDR,17.0.0.0/8,DIRECT"
+  - "IP-CIDR,100.64.0.0/10,DIRECT"
+  - "IP-CIDR,224.0.0.0/4,DIRECT"
+  - "IP-CIDR6,fe80::/10,DIRECT"
+  - "DOMAIN-SUFFIX,cn,DIRECT"
+  - "DOMAIN-KEYWORD,-cn,DIRECT"
+  - "GEOIP,CN,DIRECT"
+  - "MATCH,node"
